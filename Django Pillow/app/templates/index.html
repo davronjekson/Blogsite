@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{
+            display: flex;
+            /* justify-content: center; */
+            flex-wrap: wrap;
+        }
+        .card{
+            width: 350px;
+            box-shadow: 0px 0px 10px 2px grey;
+            padding: 10px;
+            margin: 5px;
+        }
+        .card img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        {% for blogs in blogs  %}
+        <div class="card">
+            <h2>{{ blogs.sarlavha }}</h2>
+            <p>{{ blogs.xabar }}</p>
+            <img src="{{ blogs.rasm.url }}" alt="">
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
